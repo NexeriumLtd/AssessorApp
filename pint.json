@@ -1,0 +1,21 @@
+<?php
+
+return [
+    'preset' => 'laravel',
+    'rules' => [
+        '@Laravel' => true,
+        '@Laravel:risky' => false,
+        '@PSR12' => true,
+        'not_operator_with_successor_space' => true,
+        'ordered_imports' => [
+            'sort_algorithm' => 'alpha',
+        ],
+    ],
+    'exclude' => [
+        'vendor',
+        'node_modules',
+        'bootstrap',
+        'storage',
+        'public/build',
+    ],
+];

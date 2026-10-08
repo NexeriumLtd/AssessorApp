@@ -1,0 +1,25 @@
+<?php
+
+declare(strict_types=1);
+
+return [
+    'level' => 5,
+    'paths' => [
+        __DIR__ . '/app',
+    ],
+    'excludePaths' => [
+        __DIR__ . '/app/Console',
+        __DIR__ . '/app/Http/Middleware',
+    ],
+    'rules' => [
+        \PHPStan\Rules\Functions\CallToFunctionStatementWithoutSideEffectsRule::class => [
+            'functions' => [
+                'dd',
+                'dump',
+            ],
+        ],
+    ],
+    'parameters' => [
+        'ignoreErrors' => [],
+    ],
+];
